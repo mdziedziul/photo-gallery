@@ -1,0 +1,20 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/*********************** Header ***********************/
+/* line 8, ../sass/style.scss */
+.page-header {
+  text-align: center;
+}
+
+/* line 12, ../sass/style.scss */
+.crop-img {
+  width: 100%;
+  max-height: 150px;
+}
+
+/* line 17, ../sass/style.scss */
+.large-img {
+  width: 100%;
+}

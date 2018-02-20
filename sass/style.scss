@@ -2,8 +2,18 @@
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
-@import "compass/reset";
 
-.test {
-    color: blue;
+/*********************** Header ***********************/
+
+.page-header {
+    text-align: center;
+}
+
+.crop-img {
+    width: 100%;
+    max-height: 150px;
+}
+
+.large-img {
+    width: 100%;
 }
