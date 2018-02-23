@@ -17,3 +17,21 @@
 .large-img {
     width: 100%;
 }
+
+.crop-img {
+    position: relative;
+}
+
+.caption {
+    position: absolute;
+    top: 25%;
+    height: 50%;
+    //bottom: 0;
+    left: 25%;
+    width: 50%;
+    //right: 0;
+    //margin: auto;
+    //display: flex;
+    //align-items: center;
+    text-align: center;
+}

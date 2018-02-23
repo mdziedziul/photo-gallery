@@ -66,45 +66,44 @@
     the number of photos (using the {{photos.length}} template expression, see my lecture for more details)
 -->
 <script id="albums-template" type="text/x-handlebars-template">
-    <div class="row">
-  
-      {{#each albums}}
-      <div class="col-xs-12 col-md-3"> 
-          <div class="album-thumbnail"  data-id="{{@index}}">
-            <img class="crop-img" src="{{thumbnail}}" alt=""/> 
-              
-            <div class="caption">
-                <h4> {{name}} </h4>
-                <p>{{photos.length}} photos</p>
-            </div>
-           </div>
-      </div> <!-- / col -->
-  
-      {{/each}}
-  
-    </div> <!-- / row -->
-  </script>
-  <script id="photos-template" type="text/x-handlebars-template">
-    <div class="row">
-      <!-- xs-12 : small display shows a single column (taking up 12 grid columns)-->
-      <!-- md-3 : medium and up displays use 3 grid columns per column -->
-  
-      {{#each photos}}
-      <div class="col-xs-12 col-md-3"> 
-       <div class="photo-thumbnail"  data-id="{{@index}}">
-          <img class="crop-img" src="{{src}}" alt=""/> 
+  <div class="row">
+
+    {{#each albums}}
+    <div class="col-xs-12 col-md-3"> 
+        <div class="album-thumbnail"  data-id="{{@index}}" onmouseover="document.getElementById('caption').style.display = 'block';">
+          <img class="crop-img" src="{{thumbnail}}" alt=""/> 
             
-           <div class="caption">
-              <h3>{{title}}</h3>
-              <p>{{description}}</p>
-           </div>
-        </div>
-         
-      </div> <!-- / col -->
-      {{/each}}
-  
-    </div> <!-- / row -->
-  </script>
+          <div id="caption" style="display:none">
+              <h4> {{name}} </h4>
+              <p>{{photos.length}} photos</p>
+          </div>
+          </div>
+    </div> <!-- / col -->
+    {{/each}}
+
+  </div> <!-- / row -->
+</script>
+<script id="photos-template" type="text/x-handlebars-template">
+  <div class="row">
+    <!-- xs-12 : small display shows a single column (taking up 12 grid columns)-->
+    <!-- md-3 : medium and up displays use 3 grid columns per column -->
+
+    {{#each photos}}
+    <div class="col-xs-12 col-md-3"> 
+      <div class="photo-thumbnail"  data-id="{{@index}}">
+        <img class="crop-img" src="{{src}}" alt=""/> 
+          
+          <div class="caption">
+            <h3>{{title}}</h3>
+            <p>{{description}}</p>
+          </div>
+      </div>
+        
+    </div> <!-- / col -->
+    {{/each}}
+
+  </div> <!-- / row -->
+</script>
 
   <script id="photo-template" type="text/x-handlebars-template">
     <div class="row">
@@ -120,6 +119,11 @@
     </div> <!-- / row -->
   </script>
 
+  <script>
+  function displayCaption() {
+		$(".caption").style.display = "none";			
+  }
+  </script>
 
   </body> <!-- End of the body -->
 </html>

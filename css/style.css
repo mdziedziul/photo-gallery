@@ -18,3 +18,18 @@
 .large-img {
   width: 100%;
 }
+
+/* line 21, ../sass/style.scss */
+.crop-img {
+  position: relative;
+}
+
+/* line 25, ../sass/style.scss */
+.caption {
+  position: absolute;
+  top: 25%;
+  height: 50%;
+  left: 25%;
+  width: 50%;
+  text-align: center;
+}
