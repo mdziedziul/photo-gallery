@@ -70,7 +70,7 @@
 
     {{#each albums}}
     <div class="col-xs-12 col-md-3"> 
-        <div class="album-thumbnail"  data-id="{{@index}}" onmouseover="document.getElementById('caption').style.display = 'block';">
+        <div class="album-thumbnail" id="blabla" data-id="{{@index}}" onmouseover="displayCaption(this)" onmouseout="hideCaption(this)">
           <img class="crop-img" src="{{thumbnail}}" alt=""/> 
             
           <div id="caption" style="display:none">
@@ -93,7 +93,7 @@
       <div class="photo-thumbnail"  data-id="{{@index}}">
         <img class="crop-img" src="{{src}}" alt=""/> 
           
-          <div class="caption">
+          <div id="caption">
             <h3>{{title}}</h3>
             <p>{{description}}</p>
           </div>
@@ -120,8 +120,10 @@
   </script>
 
   <script>
-  function displayCaption() {
-		$(".caption").style.display = "none";			
+  function displayCaption(x) {
+		x.style.display = "none";
+  function hideCaption(x) {
+    x.style.display = "none";
   }
   </script>
 
