@@ -23,7 +23,6 @@ function showTemplate(template, data){
 // is loaded, so we put most of the code that needs to run
 // in here
 $(document).ready(function(){
-
 	//
 	// compile all of our templates ready for use
 	//
@@ -86,13 +85,29 @@ $(document).ready(function(){
 				// (which we set to the index of the photo in
 				// the array - @index)
 				var index = $(this).data("id");
+				//$(this).addId('blaaaa');
+				$(this).parent().addClass("dupa");
+				document.getElementById("bla big-photo").style.display = "block";
 
 				// set the current photo to this photo
-				current_photo = current_album.photos[index];
+				//current_photo = current_album.photos[index];
 				
 				// displays the single photo template
-				showTemplate(photo_template, current_photo);
+				//showTemplate(photo_template, current_photo);
 			});
+
+			$(".cursor").click(function (){
+				// get the index (position in the array)
+				// of the photo we clicked on
+				// "this" is the element that was clicked on
+				// data("id") gets the attribute data-id
+				// (which we set to the index of the photo in
+				// the array - @index)
+				$("#bla big-photo").attr("id","again big-photo");
+				document.getElementById("again big-photo").style.display = "none";
+			});
+
+
 		});
 	});
 	
