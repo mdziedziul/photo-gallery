@@ -1,7 +1,5 @@
-/* Welcome to Compass.
- * In this file you should write your main styles. (or centralize your imports)
- * Import this file using the following HTML or equivalent:
- * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+@import 'theme';
+@import 'spacing-helpers';
 
 /*********************** Document styles ***********************/
 
@@ -72,7 +70,11 @@ html {
         padding: 50px 0 100px;
 
         h1 {
-            font-size: 40px;
+            font-size: 30px;
+
+            span {
+                font-size: 20px;
+            }
         }
     }
 }
@@ -136,13 +138,20 @@ section.triangle {
     margin-top: -30px;
 }
 /*********************** Section ***********************/
+
 @media (max-width: 414px) {
     h2 {
+        font-size: 25px;
+
         &.md-title {
-          margin-top: -65px !important;      
+          margin-top: -65px !important;
+          margin-bottom: 30px;      
         }
     } 
-    
+
+    section.triangle {
+        height: 50px;
+    }  
 }
 
 @media (max-width: 767px) {
@@ -332,4 +341,8 @@ footer {
     height: 250px;
     position: relative;
     margin-top: 68px;
+
+    .footer-title {
+        margin-top: 65px;
+    }
 }

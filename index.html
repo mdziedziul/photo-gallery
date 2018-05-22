@@ -28,16 +28,6 @@
 
   </head>
   <body>
-
-    <svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-      <defs>
-        <symbol id="icon-arrow-left2" viewBox="0 0 32 32">
-        <title>arrow-left2</title>
-        <path d="M12.586 27.414l-10-10c-0.781-0.781-0.781-2.047 0-2.828l10-10c0.781-0.781 2.047-0.781 2.828 0s0.781 2.047 0 2.828l-6.586 6.586h19.172c1.105 0 2 0.895 2 2s-0.895 2-2 2h-19.172l6.586 6.586c0.39 0.39 0.586 0.902 0.586 1.414s-0.195 1.024-0.586 1.414c-0.781 0.781-2.047 0.781-2.828 0z"></path>
-        </symbol>
-      </defs>
-    </svg>
-
     <header>
       <!-- page title -->
       <h1>
@@ -58,9 +48,7 @@
         <!-- A go back button to go back to all albums -->
         <span id="go-back">
           <a href="#" id="albums-tab">
-            <svg class="icon back-icon">
-              <use xlink:href="#icon-arrow-left2"></use>
-            </svg>
+            <span class="icon-arrow_left m-r-5"></span>
             Go back to all albums
           </a>
         </span>
@@ -85,7 +73,7 @@
           <h2 class="md-title"><span>ALBUMS</span></h2>
 
           {{#each albums}}
-          <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3"> 
+          <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 m-t-25"> 
             <div class="album-thumbnail" data-id="{{@index}}">
               <img class="crop-img" src="{{thumbnail}}" alt=""/>   
               <div class="tile-content">  
@@ -166,7 +154,7 @@
     </section>
     <footer>
       <section class="second-triangle"></section>
-      <p>Designed with coffe and passion.</p>
+      <p class="footer-title">Designed with <span class="icon-coffee m-r-5 m-l-5"></span> and <span class="icon-heart m-l-5"></span>.</p>
     </footer>
   </body> <!-- End of the body -->
 </html>
