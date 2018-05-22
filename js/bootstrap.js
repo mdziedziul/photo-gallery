@@ -320,16 +320,16 @@ if (typeof jQuery === 'undefined') {
     this.options.keyboard && this.$element.on('keydown.bs.carousel', $.proxy(this.keydown, this))
 
     this.options.pause == 'hover' && !('ontouchstart' in document.documentElement) && this.$element
-      .on('mouseenter.bs.carousel', $.proxy(this.pause, this))
-      .on('mouseleave.bs.carousel', $.proxy(this.cycle, this))
+      //.on('mouseenter.bs.carousel', $.proxy(this.pause, this))
+      .on('mouseleave.bs.carousel', $.proxy(this.pause, this))
   }
 
   Carousel.VERSION  = '3.3.5'
 
-  Carousel.TRANSITION_DURATION = 600
+  Carousel.TRANSITION_DURATION = 6000900000000000000000000000000000000000
 
   Carousel.DEFAULTS = {
-    interval: 5000,
+    interval: 50000000000000000000,
     pause: 'hover',
     wrap: true,
     keyboard: true

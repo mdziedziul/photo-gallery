@@ -34,6 +34,9 @@ $(document).ready(function(){
 	
 	source   = $("#photo-template").html();
 	photo_template = Handlebars.compile(source);
+
+	source   = $("#slideshow-template").html();
+	slideshow_template = Handlebars.compile(source);
 	
 
 	// 
@@ -74,47 +77,81 @@ $(document).ready(function(){
 
 			// displays the photos template
 			showTemplate(photos_template, current_album);
-
+			// Set variable th - it will be index of photo-thumbnail
+			document.getElementById('go-back').style.visibility="visible";
+			var th;
 			// add an on click al all the photo thumbnails
 			// which displays the photo in a modal popup
-			$(".photo-thumbnail").click(function (){
+			/*$(".photo-thumbnail").click(function (){
 				// get the index (position in the array)
 				// of the photo we clicked on
 				// "this" is the element that was clicked on
 				// data("id") gets the attribute data-id
 				// (which we set to the index of the photo in
 				// the array - @index)
+				th = this;
 				var index = $(this).data("id");
-				//$(this).addId('blaaaa');
-				$(this).parent().addClass("dupa");
-				document.getElementById("bla big-photo").style.display = "block";
-
-				// set the current photo to this photo
-				//current_photo = current_album.photos[index];
-				
-				// displays the single photo template
-				//showTemplate(photo_template, current_photo);
-			});
-
+				document.getElementById(index).style.display = "block";
+			});*/
 			$(".cursor").click(function (){
-				// get the index (position in the array)
-				// of the photo we clicked on
-				// "this" is the element that was clicked on
-				// data("id") gets the attribute data-id
-				// (which we set to the index of the photo in
-				// the array - @index)
-				$("#bla big-photo").attr("id","again big-photo");
-				document.getElementById("again big-photo").style.display = "none";
+				// What happens if you close the big photo?
+				// Set index to index of photo-thumbnail (th)
+				var index = $(th).data("id");
+				document.getElementById(index).style.display = "none";
 			});
 
+			$("#go-back").click(function () {
+				(this).style.visibility="hidden";
+			});
 
+			$(".photo-thumbnail").click(function () {
+				// display the slideshow template using the 
+				// current album
+				showTemplate(slideshow_template, current_album);
+				
+				// make the slideshow tab the active one
+				// first make the currently active tab inactive
+				$(".nav-tabs .active").removeClass("active");
+				// then make slideshow tab active
+				$(".photo-thumbnail").addClass("active");
+			});
 		});
 	});
-	
-	// 
-	//  clicking on the photos tab shows all of the 
-	//  photos in the current album
-	//
+
+	/*$("#photos-tab").click(function () {
+
+		// displays the photos template
+		showTemplate(photos_template, current_album);
+		console.log(current_album);
+
+		$(".photo-thumbnail").click(function (){
+			// get the index (position in the array)
+			// of the photo we clicked on
+			// "this" is the element that was clicked on
+			// data("id") gets the attribute data-id
+			// (which we set to the index of the photo in
+			// the array - @index)
+			var index = $(this).data("id");
+
+			// set the current photo to this photo
+			current_photo = current_album.photos[index];
+			
+			// displays the single photo template
+			showTemplate(photo_template, current_photo);
+		});
+		
+	});*/
+
+	/*$("#show-album").click(function () {
+		var index = $(this).data("id");
+
+			// set the current album to this album
+			current_album = gallery.albums[index];
+
+			// displays the photos template
+			showTemplate(photos_template, current_album);
+	});*/
+
 	
 
 	// start the page by showing the albums view

@@ -3,8 +3,6 @@
 
 <html lang="en">
   <head>
-    <!-- use the head section to define meta data and load css and js files -->
-
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -15,11 +13,6 @@
     <script src="js/handlebars-v3.0.3.js">
     </script>
     
-    <!-- 
-      These are our javascript files.
-      Albums.js contains the data
-      gallery.js is the code
-    -->
     <script src="js/Albums.js"> </script>
     <script src="js/gallery.js"> </script>
 
@@ -36,95 +29,144 @@
   </head>
   <body>
 
-    <div class="container">
+    <svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <defs>
+        <symbol id="icon-arrow-left2" viewBox="0 0 32 32">
+        <title>arrow-left2</title>
+        <path d="M12.586 27.414l-10-10c-0.781-0.781-0.781-2.047 0-2.828l10-10c0.781-0.781 2.047-0.781 2.828 0s0.781 2.047 0 2.828l-6.586 6.586h19.172c1.105 0 2 0.895 2 2s-0.895 2-2 2h-19.172l6.586 6.586c0.39 0.39 0.586 0.902 0.586 1.414s-0.195 1.024-0.586 1.414c-0.781 0.781-2.047 0.781-2.828 0z"></path>
+        </symbol>
+      </defs>
+    </svg>
 
-      <!-- page tile -->
-      <div class="page-header">
-        <h6>My photo albums </h6>
-      </div>    
+    <header>
+      <!-- page title -->
+      <h1>
+        My travels
+        <br>
+        <span>[ Portfolio gallery ]</span>
+      </h1>
+      <p>by Monika Dziedziul</p>
+    </header>
+    <section class="triangle"></section>
 
-      <!-- A navigation menu that selects different views -->
-      <ul class="nav nav-tabs">
-          <li role="" class="active"><a href="#" id="albums-tab" >Go back to albums</a></li>
-      </ul>
-      <br/><br/>
+    <section>
+      <div class="container">
+        <!--<ul class="nav nav-tabs">
+          <li role="" class="active"><a href="#" id="" >Albums</a></li>
+          <li role=""><a href="#" id="photos-tab" >Photos</a></li>
+        </ul>-->
+        <!-- A go back button to go back to all albums -->
+        <span id="go-back">
+          <a href="#" id="albums-tab">
+            <svg class="icon back-icon">
+              <use xlink:href="#icon-arrow-left2"></use>
+            </svg>
+            Go back to all albums
+          </a>
+        </span>
+        <br/><br/>
 
+        <!-- the content section is empty as we will fill it 
+              via javascript and templates -->
+        <div id="content"  class="container-fluid"  role="main">
+          <h2>albums</h2>
+        </div>
+      </div> <!-- / container -->
 
-      <!-- the content section is empty as we will fill it 
-            via javascript and templates -->
-      <div id="content"  class="container-fluid"  role="main">
-      </div>
-    </div> <!-- / container -->
+  <!-- this is the template for the albums view -->
+  <!-- 
+      it displays the albums in a bootstrap grid format
+      with one item for each album (using the {{#each}} template expression
+      Each album is displayed with a thumbnail image, a name and 
+      the number of photos (using the {{photos.length}} template expression
+  -->
+      <script id="albums-template" type="text/x-handlebars-template">
+        <div class="row">
+          <h2 class="md-title"><span>ALBUMS</span></h2>
 
-  <!-- Here are our Templates -->
-
-
-<!-- this is the template for the albums view -->
-<!-- 
-    it displays the albums in a bootstrap grid format
-    with one item for each album (using the {{#each}} template expression. 
-    Each album is displayed with a thumbnail image, a name and 
-    the number of photos (using the {{photos.length}} template expression, see my lecture for more details)
--->
-    <script id="albums-template" type="text/x-handlebars-template">
-      <div class="row">
-
-        {{#each albums}}
-        <div class="col-xs-12 col-md-3"> 
+          {{#each albums}}
+          <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3"> 
             <div class="album-thumbnail" data-id="{{@index}}">
               <img class="crop-img" src="{{thumbnail}}" alt=""/>   
               <div class="tile-content">  
                 <h2><span>{{year}}</span></h2>        
                 <div class="tile-cover">
-                    <h3>{{name}}</h3>
-                    <p>{{photos.length}} photos</p>
+                  <h3>{{name}}</h3>
+                  <p>{{photos.length}} photos</p>
                 </div>
               </div>
             </div>
-        </div> <!-- / col -->
-        {{/each}}
+          </div> <!-- / col -->
+          {{/each}}
 
-      </div> <!-- / row -->
-    </script>
+        </div> <!-- / row -->
+      </script>
 
-    <script id="photos-template" type="text/x-handlebars-template">
-      <div class="row">
+      <script id="photos-template" type="text/x-handlebars-template">
+        <div class="row">
 
-        {{#each photos}}
-        <div class="col-xs-12 col-lg-12" id="big-photo" data-id="{{@index}}" style="display:none">
-            <span class="close cursor" id="{{@index}}">×</span>
+          {{#each photos}}
+          <div class="col-xs-12 col-lg-12 big-photo" id="{{@index}}" data-id="{{@index}}" style="display:none">
+            <span class="close cursor" id="id{{@index}}">×</span>
             <img style="width: 100%" src="{{src}}" alt=""/>
-        </div>
-        <div class="col-xs-12 col-md-3" id="album-photos"> 
-          <div class="photo-thumbnail" data-id="{{@index}}" onclick="openModal()">
-            <img class="crop-img" src="{{src}}" alt=""/>           
-              <div class="tile-cover" data-id="{{@index}}">
-                <h3>{{title}}</h3>
-                <h5>{{location}}</h5>
-              </div>
-          </div>       
-        </div> <!-- / col -->
+          </div>
+          <div class="col-xs-12 col-md-4" id="album-photos"> 
+            <div class="photo-thumbnail" data-id="{{@index}}">
+              <img class="crop-img bigger-photo" src="{{src}}" alt=""/>           
+                <div class="tile-cover" data-id="{{@index}}">
+                  <h3>{{title}}</h3>
+                  <h5>{{location}}</h5>
+                </div>
+            </div>       
+          </div> <!-- / col -->
+          {{/each}}
+
+        </div> <!-- / row -->
+      </script>
+
+      <script id="photo-template" type="text/x-handlebars-template">
+        {{#each photos}}
+        <div class="col-xs-12 col-lg-12" data-id="{{@index}}">
+            <span class="close cursor" data-id="{{@index}}">×</span>
+            <img style="width: 100%" src="{{src}}" alt=""/>
+        </div> <!-- / col -->  
         {{/each}}
+      </script>
 
+      <script id="slideshow-template" type="text/x-handlebars-template">
+        <div class="row">
+          <div class="col-md-12">
+            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" data-interval="false">
+              
+             <!-- Wrapper for slides -->
+              <div class="carousel-inner" role="listbox">
+      
+                {{#each photos}}
+                  <div class="item {{#if @first}}active{{/if}}">
+                   <img class="carousel-img" src="{{src}}" alt=""/> 
+                </div> <!-- / carousel item -->
+                {{/each}}
+      
+              </div>
+      
+              <!-- Controls -->
+              <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
+      
+          </div> <!-- / carousel --> 
+        </div> <!-- / col -->
       </div> <!-- / row -->
-    </script>
-
-    <script id="photo-template" type="text/x-handlebars-template">
-      {{#each photos}}
-      <div class="col-xs-12 col-lg-12" id="big-photo" data-id="{{@index}}">
-          <span class="close cursor" data-id="{{@index}}">×</span>
-          <img style="width: 100%" src="{{src}}" alt=""/>
-      </div> <!-- / col -->  
-    </script>
-
-    <script>
-      /*function openModal() {
-      document.getElementById('big-photo').style.display = "block";
-      }
-      function closeModal() {
-      document.getElementById('big-photo').style.display = "none";
-      }*/
-    </script>
-
+      </script>
+    </section>
+    <footer>
+      <section class="second-triangle"></section>
+      <p>Designed with coffe and passion.</p>
+    </footer>
   </body> <!-- End of the body -->
 </html>

@@ -3,9 +3,6 @@
 // each album contains an array of photos 
 // (plus a name and a thumbnail image)
 // The photos contain an image src and some metadata
-Handlebars.registerHelper("xif", function(expression, options) {
-	return Handlebars.helpers["x"].apply(this, [expression, options]) ? options.fn(this) : options.inverse(this);
-  });
 
 var gallery = {
 	albums : [
@@ -25,7 +22,25 @@ var gallery = {
 					title : "Thai island", 
 					location : "?",
 					description : "..."
-				} 
+				} ,
+				{	
+					src : "images/Thailand.jpg",
+					title : "Thai island", 
+					location : "?",
+					description : "..."
+				},
+				{	
+					src : "images/Thailand.jpg",
+					title : "Thai island", 
+					location : "?",
+					description : "..."
+				},
+				{	
+					src : "images/Thailand.jpg",
+					title : "Thai island", 
+					location : "?",
+					description : "..."
+				}
 			]
 		},
 		{
@@ -66,7 +81,136 @@ var gallery = {
 					description : "looks like he needs that jacket"
 				}
 			]
+		},
+		{
+			name : "Croatia", 
+			thumbnail : "images/Cuba.jpg",
+			year : "2013",
+			photos : [
+				{	
+					src : "images/Cuba.jpg",
+					title : "Colorful cars", 
+					location : "Havana",
+					description : "looks like he needs that jacket"
+				}
+			]
+		},
+		{
+			name : "Ireland", 
+			thumbnail : "images/Cuba.jpg",
+			year : "2018",
+			photos : [
+				{	
+					src : "images/Cuba.jpg",
+					title : "Colorful cars", 
+					location : "Havana",
+					description : "looks like he needs that jacket"
+				}
+			]
+		},
+		{
+			name : "Sweden", 
+			thumbnail : "images/Cuba.jpg",
+			year : "2018",
+			photos : [
+				{	
+					src : "images/Cuba.jpg",
+					title : "Colorful cars", 
+					location : "Havana",
+					description : "looks like he needs that jacket"
+				}
+			]
+		},
+		{
+			name : "Slovakia", 
+			thumbnail : "images/Cuba.jpg",
+			year : "2018",
+			photos : [
+				{	
+					src : "images/Cuba.jpg",
+					title : "Colorful cars", 
+					location : "Havana",
+					description : "looks like he needs that jacket"
+				}
+			]
+		},
+		{
+			name : "Czech Republic", 
+			thumbnail : "images/Cuba.jpg",
+			year : "2018",
+			photos : [
+				{	
+					src : "images/Cuba.jpg",
+					title : "Colorful cars", 
+					location : "Havana",
+					description : "looks like he needs that jacket"
+				}
+			]
+		},
+		{
+			name : "Hungary", 
+			thumbnail : "images/Cuba.jpg",
+			year : "2018",
+			photos : [
+				{	
+					src : "images/Cuba.jpg",
+					title : "Colorful cars", 
+					location : "Havana",
+					description : "looks like he needs that jacket"
+				}
+			]
+		},
+		{
+			name : "Germany", 
+			thumbnail : "images/Cuba.jpg",
+			year : "2018",
+			photos : [
+				{	
+					src : "images/Cuba.jpg",
+					title : "Colorful cars", 
+					location : "Havana",
+					description : "looks like he needs that jacket"
+				}
+			]
+		},
+		{
+			name : "Canada", 
+			thumbnail : "images/Cuba.jpg",
+			year : "2018",
+			photos : [
+				{	
+					src : "images/Cuba.jpg",
+					title : "Colorful cars", 
+					location : "Havana",
+					description : "looks like he needs that jacket"
+				}
+			]
+		},
+		{
+			name : "Slovenia", 
+			thumbnail : "images/Cuba.jpg",
+			year : "2018",
+			photos : [
+				{	
+					src : "images/Cuba.jpg",
+					title : "Colorful cars", 
+					location : "Havana",
+					description : "looks like he needs that jacket"
+				}
+			]
+		},
+		{
+			name : "Italy", 
+			thumbnail : "images/Cuba.jpg",
+			year : "2018",
+			photos : [
+				{	
+					src : "images/Cuba.jpg",
+					title : "Colorful cars", 
+					location : "Havana",
+					description : "looks like he needs that jacket"
+				}
+			]
 		}
-
 	]
 };
