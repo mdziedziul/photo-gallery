@@ -743,20 +743,21 @@ h2.md-title span {
 /* line 209, ../sass/style.scss */
 .album-thumbnail {
   margin-bottom: 15px;
+  box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1);
 }
 
-/* line 216, ../sass/style.scss */
+/* line 217, ../sass/style.scss */
 .album-thumbnail:hover img,
 .photo-thumbnail:hover img {
   opacity: 0.6;
 }
-/* line 220, ../sass/style.scss */
+/* line 221, ../sass/style.scss */
 .album-thumbnail:hover .tile-content h2,
 .photo-thumbnail:hover .tile-content h2 {
   opacity: 0;
   visibility: hidden;
 }
-/* line 225, ../sass/style.scss */
+/* line 226, ../sass/style.scss */
 .album-thumbnail:hover .tile-cover,
 .photo-thumbnail:hover .tile-cover {
   opacity: 1;
@@ -764,7 +765,7 @@ h2.md-title span {
 }
 
 /* Titles on hoverover image */
-/* line 235, ../sass/style.scss */
+/* line 236, ../sass/style.scss */
 .tile-content h2 {
   position: absolute;
   top: 25%;
@@ -776,7 +777,7 @@ h2.md-title span {
   visibility: visible;
   transform: translateY(10px);
 }
-/* line 246, ../sass/style.scss */
+/* line 247, ../sass/style.scss */
 .tile-content h2 span {
   padding: 5px;
   border: 2px solid white;
@@ -784,7 +785,7 @@ h2.md-title span {
   background-color: rgba(101, 101, 101, 0.397);
 }
 
-/* line 255, ../sass/style.scss */
+/* line 256, ../sass/style.scss */
 .tile-cover {
   position: absolute;
   top: 25%;
@@ -797,13 +798,13 @@ h2.md-title span {
   opacity: 0;
   visibility: hidden;
 }
-/* line 267, ../sass/style.scss */
+/* line 268, ../sass/style.scss */
 .tile-cover h3 {
   font-weight: 700;
 }
 
 /*********************** Big photo window ***********************/
-/* line 274, ../sass/style.scss */
+/* line 275, ../sass/style.scss */
 .big-photo {
   position: fixed;
   z-index: 9999999999999999999999999999999999999;
@@ -816,7 +817,7 @@ h2.md-title span {
   background-color: #84b4b1;
 }
 
-/* line 286, ../sass/style.scss */
+/* line 287, ../sass/style.scss */
 .close {
   color: #fff;
   opacity: 1;
@@ -826,7 +827,7 @@ h2.md-title span {
   font-size: 35px;
   font-weight: bold;
 }
-/* line 295, ../sass/style.scss */
+/* line 296, ../sass/style.scss */
 .close:hover {
   color: #999;
   text-decoration: none;
@@ -834,13 +835,13 @@ h2.md-title span {
 }
 
 /*********************** Footer ***********************/
-/* line 304, ../sass/style.scss */
+/* line 305, ../sass/style.scss */
 section.second-triangle {
   position: relative;
   height: 70px;
   z-index: 1;
 }
-/* line 309, ../sass/style.scss */
+/* line 310, ../sass/style.scss */
 section.second-triangle:before {
   transform: skewY(-3deg);
   content: "";
@@ -855,7 +856,7 @@ section.second-triangle:before {
   z-index: -1;
 }
 
-/* line 324, ../sass/style.scss */
+/* line 325, ../sass/style.scss */
 footer {
   background-color: #9dc3c1;
   opacity: 0.8;
@@ -866,7 +867,7 @@ footer {
   position: relative;
   margin-top: 68px;
 }
-/* line 334, ../sass/style.scss */
+/* line 335, ../sass/style.scss */
 footer .footer-title {
   margin-top: 65px;
 }
