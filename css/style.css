@@ -536,7 +536,7 @@ html {
   height: 100%;
 }
 
-/* line 16, ../sass/style.scss */
+/* line 15, ../sass/style.scss */
 .col-md-3,
 .col-md-4,
 .col-xs-12 {
@@ -544,7 +544,7 @@ html {
   padding-right: 5px;
 }
 
-/* line 23, ../sass/style.scss */
+/* line 22, ../sass/style.scss */
 .icon {
   display: inline-block;
   width: 1em;
@@ -554,74 +554,67 @@ html {
   fill: currentColor;
 }
 
-/* line 32, ../sass/style.scss */
-.back-icon {
-  margin-right: 5px;
-}
-
-/* line 36, ../sass/style.scss */
+/* line 31, ../sass/style.scss */
 .container {
   transition: all 0.3s linear;
 }
 
 /*********************** Bootstrap style changes ***********************/
-/* line 47, ../sass/style.scss */
+/* line 38, ../sass/style.scss */
 .carousel-control.left, .carousel-control.right {
   background-image: none;
   color: #656565;
 }
-/* line 52, ../sass/style.scss */
+/* line 43, ../sass/style.scss */
 .carousel-control.left:active, .carousel-control.right:active {
   color: #656565;
 }
-/* line 56, ../sass/style.scss */
+/* line 47, ../sass/style.scss */
 .carousel-control.left:hover, .carousel-control.right:hover {
   color: #312f2f;
 }
 
-/* line 62, ../sass/style.scss */
+/* line 53, ../sass/style.scss */
 .carousel-inner {
   max-height: 600px;
 }
 
 /*********************** Header ***********************/
 @media (max-width: 414px) {
-  /* line 69, ../sass/style.scss */
+  /* line 60, ../sass/style.scss */
   header {
     padding: 50px 0 100px;
   }
-  /* line 72, ../sass/style.scss */
+  /* line 63, ../sass/style.scss */
   header h1 {
     font-size: 30px;
   }
-  /* line 75, ../sass/style.scss */
+  /* line 66, ../sass/style.scss */
   header h1 span {
     font-size: 20px;
   }
 }
 @media (min-width: 415px) {
-  /* line 83, ../sass/style.scss */
+  /* line 74, ../sass/style.scss */
   header {
     padding: 50px 0 150px;
   }
-  /* line 86, ../sass/style.scss */
+  /* line 77, ../sass/style.scss */
   header h1 {
     font-size: 65px;
   }
 }
-/* line 92, ../sass/style.scss */
+/* line 83, ../sass/style.scss */
 header {
   background-color: #9dc3c1;
   opacity: 0.8;
   text-transform: uppercase;
   color: #fff;
   text-align: center;
-  /*padding: 50px 0 150px;*/
   position: relative;
 }
-/* line 101, ../sass/style.scss */
+/* line 91, ../sass/style.scss */
 header h1 {
-  /*font-size: 65px;*/
   font-weight: 400;
   letter-spacing: 3px;
   line-height: 0.8;
@@ -629,20 +622,20 @@ header h1 {
   font-family: "Montserrat", sans-serif;
   text-align: center;
 }
-/* line 111, ../sass/style.scss */
+/* line 100, ../sass/style.scss */
 header span {
   font-size: 25px;
   line-height: 1;
   text-align: center;
 }
 
-/* line 118, ../sass/style.scss */
+/* line 107, ../sass/style.scss */
 section.triangle {
   position: relative;
   height: 70px;
   z-index: 1;
 }
-/* line 122, ../sass/style.scss */
+/* line 111, ../sass/style.scss */
 section.triangle:before {
   transform: skewY(-3deg);
   content: "";
@@ -657,48 +650,48 @@ section.triangle:before {
   z-index: -1;
 }
 
-/* line 137, ../sass/style.scss */
+/* line 126, ../sass/style.scss */
 .add-margin-top-6x {
   margin-top: -30px;
 }
 
 /*********************** Section ***********************/
 @media (max-width: 414px) {
-  /* line 143, ../sass/style.scss */
+  /* line 133, ../sass/style.scss */
   h2 {
     font-size: 25px;
   }
-  /* line 146, ../sass/style.scss */
+  /* line 136, ../sass/style.scss */
   h2.md-title {
     margin-top: -65px !important;
     margin-bottom: 30px;
   }
 
-  /* line 152, ../sass/style.scss */
+  /* line 142, ../sass/style.scss */
   section.triangle {
     height: 50px;
   }
 }
 @media (max-width: 767px) {
-  /* line 158, ../sass/style.scss */
+  /* line 148, ../sass/style.scss */
   .crop-img {
     height: 250px !important;
   }
 }
-/* line 163, ../sass/style.scss */
+/* line 153, ../sass/style.scss */
 .crop-img {
   width: 100%;
   height: 190px;
   position: relative;
 }
 
-/* line 169, ../sass/style.scss */
+/* line 159, ../sass/style.scss */
 .container-fluid {
   padding-left: 0px;
   padding-right: 0px;
 }
 
-/* line 174, ../sass/style.scss */
+/* line 164, ../sass/style.scss */
 #albums-tab {
   display: flex;
   align-items: center;
@@ -706,13 +699,13 @@ section.triangle:before {
   color: #312f2f;
   font-weight: 600;
 }
-/* line 181, ../sass/style.scss */
+/* line 171, ../sass/style.scss */
 #albums-tab:hover {
   text-decoration: none;
   color: #9dc3c1;
 }
 
-/* line 188, ../sass/style.scss */
+/* line 178, ../sass/style.scss */
 h2.md-title {
   padding: 8px 0;
   margin-top: -90px;
@@ -720,50 +713,50 @@ h2.md-title {
   text-align: center;
   color: #656565;
 }
-/* line 196, ../sass/style.scss */
+/* line 185, ../sass/style.scss */
 h2.md-title span {
   padding: 5px 0px;
   border-bottom: 2px solid #656565;
   border-top: 2px solid #656565;
 }
 
-/* line 204, ../sass/style.scss */
+/* line 193, ../sass/style.scss */
 #album-photos {
   margin-bottom: 20px;
 }
 
-/* line 208, ../sass/style.scss */
+/* line 197, ../sass/style.scss */
 #go-back {
   visibility: hidden;
 }
 
-/* line 212, ../sass/style.scss */
+/* line 201, ../sass/style.scss */
 .bigger-photo {
   height: 250px;
 }
 
-/* line 216, ../sass/style.scss */
+/* line 205, ../sass/style.scss */
 .large-img {
   width: 100%;
 }
 
-/* line 220, ../sass/style.scss */
+/* line 209, ../sass/style.scss */
 .album-thumbnail {
   margin-bottom: 15px;
 }
 
-/* line 227, ../sass/style.scss */
+/* line 216, ../sass/style.scss */
 .album-thumbnail:hover img,
 .photo-thumbnail:hover img {
   opacity: 0.6;
 }
-/* line 231, ../sass/style.scss */
+/* line 220, ../sass/style.scss */
 .album-thumbnail:hover .tile-content h2,
 .photo-thumbnail:hover .tile-content h2 {
   opacity: 0;
   visibility: hidden;
 }
-/* line 236, ../sass/style.scss */
+/* line 225, ../sass/style.scss */
 .album-thumbnail:hover .tile-cover,
 .photo-thumbnail:hover .tile-cover {
   opacity: 1;
@@ -771,7 +764,7 @@ h2.md-title span {
 }
 
 /* Titles on hoverover image */
-/* line 246, ../sass/style.scss */
+/* line 235, ../sass/style.scss */
 .tile-content h2 {
   position: absolute;
   top: 25%;
@@ -783,7 +776,7 @@ h2.md-title span {
   visibility: visible;
   transform: translateY(10px);
 }
-/* line 257, ../sass/style.scss */
+/* line 246, ../sass/style.scss */
 .tile-content h2 span {
   padding: 5px;
   border: 2px solid white;
@@ -791,7 +784,7 @@ h2.md-title span {
   background-color: rgba(101, 101, 101, 0.397);
 }
 
-/* line 266, ../sass/style.scss */
+/* line 255, ../sass/style.scss */
 .tile-cover {
   position: absolute;
   top: 25%;
@@ -804,13 +797,13 @@ h2.md-title span {
   opacity: 0;
   visibility: hidden;
 }
-/* line 278, ../sass/style.scss */
+/* line 267, ../sass/style.scss */
 .tile-cover h3 {
   font-weight: 700;
 }
 
 /*********************** Big photo window ***********************/
-/* line 285, ../sass/style.scss */
+/* line 274, ../sass/style.scss */
 .big-photo {
   position: fixed;
   z-index: 9999999999999999999999999999999999999;
@@ -823,9 +816,9 @@ h2.md-title span {
   background-color: #84b4b1;
 }
 
-/* line 298, ../sass/style.scss */
+/* line 286, ../sass/style.scss */
 .close {
-  color: white;
+  color: #fff;
   opacity: 1;
   position: absolute;
   top: 10px;
@@ -833,7 +826,7 @@ h2.md-title span {
   font-size: 35px;
   font-weight: bold;
 }
-/* line 307, ../sass/style.scss */
+/* line 295, ../sass/style.scss */
 .close:hover {
   color: #999;
   text-decoration: none;
@@ -841,13 +834,13 @@ h2.md-title span {
 }
 
 /*********************** Footer ***********************/
-/* line 316, ../sass/style.scss */
+/* line 304, ../sass/style.scss */
 section.second-triangle {
   position: relative;
   height: 70px;
   z-index: 1;
 }
-/* line 320, ../sass/style.scss */
+/* line 309, ../sass/style.scss */
 section.second-triangle:before {
   transform: skewY(-3deg);
   content: "";
@@ -862,7 +855,7 @@ section.second-triangle:before {
   z-index: -1;
 }
 
-/* line 335, ../sass/style.scss */
+/* line 324, ../sass/style.scss */
 footer {
   background-color: #9dc3c1;
   opacity: 0.8;
@@ -873,7 +866,7 @@ footer {
   position: relative;
   margin-top: 68px;
 }
-/* line 345, ../sass/style.scss */
+/* line 334, ../sass/style.scss */
 footer .footer-title {
   margin-top: 65px;
 }

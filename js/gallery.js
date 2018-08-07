@@ -1,7 +1,4 @@
-
-/*
- *		This file contains the javascript code for our gallery
- */
+//The javascript code for gallery 
 
 // variables for all of the templates so we only have to compile
 // them once on page load and can then use the same compiled 
@@ -23,9 +20,8 @@ function showTemplate(template, data){
 // is loaded, so we put most of the code that needs to run
 // in here
 $(document).ready(function(){
-	//
-	// compile all of our templates ready for use
-	//
+	
+	// compile all of our templates ready for use	
 	var source   = $("#albums-template").html();
 	albums_template = Handlebars.compile(source);
 	
@@ -38,11 +34,9 @@ $(document).ready(function(){
 	source   = $("#slideshow-template").html();
 	slideshow_template = Handlebars.compile(source);
 	
-
-	// 
+	 
 	//  clicking on the albums tab shows the 
-	//  thumbnails of all the albums
-	//
+	//  thumbnails of all the albums	
 	$("#albums-tab").click(function () {
 
 		// displays the albums template
@@ -51,17 +45,13 @@ $(document).ready(function(){
 		// make the albums tab the active one
 		// first make the currently active tab inactive
 		$(".nav-tabs .active").removeClass("active");
+
 		// then make albums tab active
 		$("#albums-tab").addClass("active");
 
 		// add a click callback to each album 
 		// thumbnail which displays the photos
 		// template on that album
-		// (I have written out the code for this 
-		// function for clarity but it is actually
-		// pretty much the same as the photos tab
-		// function so we could acutally just
-		// call $(".photo-thumbnail").click() ) 
 		$(".album-thumbnail").click(function (){
 			
 			// get the index (position in the array)
@@ -77,22 +67,11 @@ $(document).ready(function(){
 
 			// displays the photos template
 			showTemplate(photos_template, current_album);
-			// Set variable th - it will be index of photo-thumbnail
+
+			// Set variable th - it will be the index of photo-thumbnail
 			document.getElementById('go-back').style.visibility="visible";
 			var th;
-			// add an on click al all the photo thumbnails
-			// which displays the photo in a modal popup
-			/*$(".photo-thumbnail").click(function (){
-				// get the index (position in the array)
-				// of the photo we clicked on
-				// "this" is the element that was clicked on
-				// data("id") gets the attribute data-id
-				// (which we set to the index of the photo in
-				// the array - @index)
-				th = this;
-				var index = $(this).data("id");
-				document.getElementById(index).style.display = "block";
-			});*/
+
 			$(".cursor").click(function (){
 				// What happens if you close the big photo?
 				// Set index to index of photo-thumbnail (th)
@@ -112,51 +91,14 @@ $(document).ready(function(){
 				// make the slideshow tab the active one
 				// first make the currently active tab inactive
 				$(".nav-tabs .active").removeClass("active");
+
 				// then make slideshow tab active
 				$(".photo-thumbnail").addClass("active");
 			});
 		});
 	});
-
-	/*$("#photos-tab").click(function () {
-
-		// displays the photos template
-		showTemplate(photos_template, current_album);
-		console.log(current_album);
-
-		$(".photo-thumbnail").click(function (){
-			// get the index (position in the array)
-			// of the photo we clicked on
-			// "this" is the element that was clicked on
-			// data("id") gets the attribute data-id
-			// (which we set to the index of the photo in
-			// the array - @index)
-			var index = $(this).data("id");
-
-			// set the current photo to this photo
-			current_photo = current_album.photos[index];
-			
-			// displays the single photo template
-			showTemplate(photo_template, current_photo);
-		});
-		
-	});*/
-
-	/*$("#show-album").click(function () {
-		var index = $(this).data("id");
-
-			// set the current album to this album
-			current_album = gallery.albums[index];
-
-			// displays the photos template
-			showTemplate(photos_template, current_album);
-	});*/
-
 	
-
-	// start the page by showing the albums view
-	// we do this by virtually clicking on the 
-	// albums tab
+	// Start the page by showing the albums view
 	$("#albums-tab").click();
 
 });

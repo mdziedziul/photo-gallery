@@ -10,7 +10,6 @@ $blue: #9dc3c1;
 
 html {
     height: 100%;
-    //background-color: black;
 }
 
 .col-md-3,
@@ -27,10 +26,6 @@ html {
     stroke-width: 0;
     stroke: currentColor;
     fill: currentColor;
-  }
-
-.back-icon {
-    margin-right: 5px;
 }
 
 .container {
@@ -39,23 +34,19 @@ html {
 
 /*********************** Bootstrap style changes ***********************/
 
-.carousel-inner > .item.next.left, .carousel-inner > .item.prev.right, .carousel-inner > .item.active {
-    //transform: none !important;
-}
-
 .carousel-control {
     &.left,
     &.right {
-    background-image: none;
-    color: $grey;
+        background-image: none;
+        color: $grey;
 
-    &:active {
-    color: $grey;
-    }
+        &:active {
+            color: $grey;
+        }
 
-    &:hover {
-        color: $dark-grey;
-    }
+        &:hover {
+            color: $dark-grey;
+        }
     }
 }
 
@@ -95,23 +86,21 @@ header {
     text-transform: uppercase;
     color: #fff;
     text-align: center;
-    /*padding: 50px 0 150px;*/
     position: relative;
 
     h1 {
-    /*font-size: 65px;*/
-    font-weight: 400;
-    letter-spacing: 3px;
-    line-height: 0.8;
-    padding-top: 50px;
-    font-family: "Montserrat", sans-serif;
-    text-align: center;
+        font-weight: 400;
+        letter-spacing: 3px;
+        line-height: 0.8;
+        padding-top: 50px;
+        font-family: "Montserrat", sans-serif;
+        text-align: center;
     }
 
     span {
-    font-size: 25px;
-    line-height: 1;
-    text-align: center;
+        font-size: 25px;
+        line-height: 1;
+        text-align: center;
     }
 }
 
@@ -137,6 +126,7 @@ section.triangle {
 .add-margin-top-6x {
     margin-top: -30px;
 }
+
 /*********************** Section ***********************/
 
 @media (max-width: 414px) {
@@ -186,7 +176,6 @@ section.triangle {
 
 h2 {
     &.md-title {
-      //text-shadow: 0 2px 0 rgba(0, 0, 0, .12);
       padding: 8px 0;
       margin-top: -90px;
       margin-bottom: 20px;
@@ -194,9 +183,9 @@ h2 {
       color: $grey;
 
         & span {
-        padding: 5px 0px;
-        border-bottom: 2px solid $grey;
-        border-top: 2px solid $grey;
+            padding: 5px 0px;
+            border-bottom: 2px solid $grey;
+            border-top: 2px solid $grey;
         }
     }
 }
@@ -292,11 +281,10 @@ h2 {
     height: 100%;
     overflow: auto;
     background-color: #84b4b1;
-    //visibility: hidden;
 }
 
 .close {
-    color: white;
+    color: #fff;
     opacity: 1;
     position: absolute;
     top: 10px;
@@ -317,6 +305,7 @@ section.second-triangle {
     position: relative;
     height: 70px;
     z-index: 1;
+    
     &:before {
         transform: skewY(-3deg);
         content: "";
