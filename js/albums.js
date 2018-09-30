@@ -8,28 +8,42 @@ var gallery = {
 	albums : [
 		{
 			name : "Croatia", 
-			thumbnail : "images/Cuba.jpg",
+			thumbnail : "images/Croatia2.jpg",
 			year : "2013",
 			photos : [
 				{	
-					src : "images/Cuba.jpg",
-					title : "Colorful cars", 
-					location : "Havana",
-					description : "looks like he needs that jacket"
+					src : "images/Croatia1.jpg",
+					title : "Baska", 
+					location : "Baska, Croatia",
+					description : "Eurotrip with friends"
+				},
+				{	
+					src : "images/Croatia2.jpg",
+					title : "Plitvice Lakes", 
+					location : "Plitvice lakes, Croatia",
+					description : "Eurotrip with friends"
 				}
+
 			]
 		},
 		{
 			name : "Slovenia", 
-			thumbnail : "images/Cuba.jpg",
+			thumbnail : "images/Slovenia1.jpg",
 			year : "2013",
 			photos : [
 				{	
-					src : "images/Cuba.jpg",
-					title : "Colorful cars", 
-					location : "Havana",
-					description : "looks like he needs that jacket"
-				}
+					src : "images/Slovenia2.jpg",
+					title : "Canyoning", 
+					location : "Slovenia",
+					description : "It was awesome!"
+				},
+				{	
+					src : "images/Slovenia1.jpg",
+					title : "Beautiful village", 
+					location : "Slovenia",
+					description : "It was awesome!"
+				},
+
 			]
 		},
 		{
@@ -38,60 +52,67 @@ var gallery = {
 			year : "2014",
 			photos : [
 				{	
+					src : "images/India1.jpg",
+					title : "Temple", 
+					location : "Jaipur",
+					description : "..."
+				},
+				{	
 					src : "images/India.jpg",
 					title : "Taj Mahal", 
 					location : "Agra",
-					description : "..."
-				},
-				{	
-					src : "images/Thailand.jpg",
-					title : "Thai island", 
-					location : "?",
-					description : "..."
-				} ,
-				{	
-					src : "images/Thailand.jpg",
-					title : "Thai island", 
-					location : "?",
-					description : "..."
-				},
-				{	
-					src : "images/Thailand.jpg",
-					title : "Thai island", 
-					location : "?",
-					description : "..."
-				},
-				{	
-					src : "images/Thailand.jpg",
-					title : "Thai island", 
-					location : "?",
 					description : "..."
 				}
 			]
 		},
 		{
+			name : "France", 
+			thumbnail : "images/Paris.jpg",
+			year : "2018",
+			photos : [
+				{	
+					src : "images/Paris2.jpg",
+					title : "Notre Dame", 
+					location : "Paris",
+					description : "looks like he needs that jacket"
+				},
+				{	
+					src : "images/Paris.jpg",
+					title : "Eiffel Tower", 
+					location : "Paris",
+					description : "looks like he needs that jacket"
+				},
+			]
+		},
+		{
 			name : "Germany", 
-			thumbnail : "images/Cuba.jpg",
+			thumbnail : "images/Berlin.jpg",
 			year : "2014",
 			photos : [
 				{	
-					src : "images/Cuba.jpg",
-					title : "Colorful cars", 
+					src : "images/Berlin.jpg",
+					title : "Television Tower", 
 					location : "Berlin",
-					description : "looks like he needs that jacket"
+					description : "..."
 				}
 			]
 		},
 		{
 			name : "Austria", 
-			thumbnail : "images/Cuba.jpg",
+			thumbnail : "images/Vienna.jpg",
 			year : "2014",
 			photos : [
 				{	
-					src : "images/Cuba.jpg",
-					title : "Colorful cars", 
+					src : "images/Austria2.jpg",
+					title : "Obertauern", 
+					location : "Austria",
+					description : "..."
+				},
+				{	
+					src : "images/Vienna.jpg",
+					title : "Schönbrunn Palace", 
 					location : "Vienna",
-					description : "looks like he needs that jacket"
+					description : "..."
 				}
 			]
 		},
@@ -101,62 +122,102 @@ var gallery = {
 			year : "2015",
 			photos : [
 				{	
+					src : "images/Norway1.jpg",
+					title : "Trollstigen", 
+					location : "Norway",
+					description : "..."
+				},
+				{	
+					src : "images/Norway2.jpg",
+					title : "Hytte", 
+					location : "Norway",
+					description : "..."
+				},
+				{	
 					src : "images/Norway.jpg",
 					title : "Trollstigen", 
-					location : "?",
+					location : "Norway",
+					description : "..."
+				},
+			]
+		},
+		{
+			name : "Sweden", 
+			thumbnail : "images/Sweden1.jpg",
+			year : "2015",
+			photos : [
+				{	
+					src : "images/Sweden1.jpg",
+					title : "Karlskrona", 
+					location : "Sweden",
+				},
+				{	
+					src : "images/Sweden2.jpg",
+					title : "Karlskrona", 
+					location : "Sweden",
+				},
+			]
+		},
+		{
+			name : "Italy", 
+			thumbnail : "images/Italy.jpg",
+			year : "2016",
+			photos : [
+				{	
+					src : "images/Italy1.jpg",
+					title : "Cinque Terre", 
+					location : "Italy",
+					description : "..."
+				},
+				{	
+					src : "images/Italy2.jpg",
+					title : "Pisa", 
+					location : "Italy",
+					description : "..."
+				},
+				{	
+					src : "images/Italy.jpg",
+					title : "Cinque Terre", 
+					location : "Italy",
 					description : "..."
 				}
 			]
 		},
 		{
-			name : "Sweden", 
-			thumbnail : "images/Cuba.jpg",
-			year : "2015",
-			photos : [
-				{	
-					src : "images/Cuba.jpg",
-					title : "Colorful cars", 
-					location : "Karlskrona",
-					description : "looks like he needs that jacket"
-				}
-			]
-		},
-		{
-			name : "Italy", 
-			thumbnail : "images/Cuba.jpg",
-			year : "2016",
-			photos : [
-				{	
-					src : "images/Cuba.jpg",
-					title : "Colorful cars", 
-					location : "Venice",
-					description : "looks like he needs that jacket"
-				}
-			]
-		},
-		{
 			name : "Ireland", 
-			thumbnail : "images/Cuba.jpg",
+			thumbnail : "images/Dublin.jpg",
 			year : "2016",
 			photos : [
 				{	
-					src : "images/Cuba.jpg",
-					title : "Colorful cars", 
-					location : "Dublin",
-					description : "looks like he needs that jacket"
-				}
+					src : "images/Dublin1.jpg",
+					title : "Dublin", 
+					location : "Ireland",
+					description : "..."
+				},
+				{	
+					src : "images/Dublin.jpg",
+					title : "Dublin", 
+					location : "Ireland",
+					description : "..."
+				},
 			]
 		},
 		{
 			name : "Hungary", 
-			thumbnail : "images/Cuba.jpg",
+			thumbnail : "images/Budapest1.jpg",
 			year : "2017",
 			photos : [
 				{	
-					src : "images/Cuba.jpg",
-					title : "Colorful cars", 
-					location : "Budapest",
-					description : "looks like he needs that jacket"
+					src : "images/Budapest1.jpg",
+					title : "Budapest1", 
+					location : "Hungary",
+					description : "..."
+				},
+				{	
+					src : "images/Budapest2.jpg",
+					title : "Budapest1", 
+					location : "Hungary",
+					description : "..."
 				}
 			]
 		},
@@ -166,77 +227,94 @@ var gallery = {
 			year : "2017",
 			photos : [
 				{	
+					src : "images/Thailand1.jpg",
+					title : "Krabi", 
+					location : "Thailand",
+					description : "..."
+				},
+				{	
+					src : "images/Thailand2.jpg",
+					title : "Krabi", 
+					location : "Thailand",
+					description : "..."
+				},
+				{	
 					src : "images/Thailand.jpg",
 					title : "Thai island", 
-					location : "?",
+					location : "Thailand",
 					description : "..."
 				} 
 			]
 		},
 		{
 			name : "Canada", 
-			thumbnail : "images/Cuba.jpg",
+			thumbnail : "images/Toronto.jpg",
 			year : "2018",
 			photos : [
 				{	
-					src : "images/Cuba.jpg",
-					title : "Colorful cars", 
-					location : "Toronto",
-					description : "looks like he needs that jacket"
+					src : "images/Toronto.jpg",
+					title : "Toronto", 
+					location : "Canada",
+					description : "..."
 				}
 			]
 		},
 		{
 			name : "Cuba", 
-			thumbnail : "images/Cuba.jpg",
+			thumbnail : "images/Cuba1.jpg",
 			year : "2018",
 			photos : [
 				{	
-					src : "images/Cuba.jpg",
-					title : "Colorful cars", 
-					location : "Havana",
-					description : "looks like he needs that jacket"
+					src : "images/Cuba2.jpg",
+					title : "Trinidad", 
+					location : "Cuba",
+					description : "..."
+				},
+				{	
+					src : "images/Cuba1.jpg",
+					title : "Varadero", 
+					location : "Cuba",
+					description : "..."
 				}
 			]
 		},
 		{
 			name : "Slovakia", 
-			thumbnail : "images/Cuba.jpg",
+			thumbnail : "images/Slovakia.jpg",
 			year : "2018",
 			photos : [
 				{	
-					src : "images/Cuba.jpg",
-					title : "Colorful cars", 
-					location : "Presov",
-					description : "looks like he needs that jacket"
+					src : "images/Slovakia2.jpg",
+					title : "High Tatras", 
+					location : "Slovakia",
+					description : "..."
+				},
+				{	
+					src : "images/Slovakia.jpg",
+					title : "Spišský hrad", 
+					location : "Zehra",
+					description : "..."
 				}
 			]
 		},
 		{
 			name : "Czech Republic", 
-			thumbnail : "images/Cuba.jpg",
+			thumbnail : "images/Lednice.jpg",
 			year : "2018",
 			photos : [
 				{	
-					src : "images/Cuba.jpg",
-					title : "Colorful cars", 
+					src : "images/Prague.jpg",
+					title : "Gardens", 
 					location : "Prague",
-					description : "looks like he needs that jacket"
+					description : "..."
+				},
+				{	
+					src : "images/Lednice.jpg",
+					title : "Lednice", 
+					location : "Czech REpublic",
+					description : "..."
 				}
 			]
 		},
-		{
-			name : "Poland", 
-			thumbnail : "images/Cuba.jpg",
-			year : "2018",
-			photos : [
-				{	
-					src : "images/Cuba.jpg",
-					title : "Colorful cars", 
-					location : "Gdansk",
-					description : "looks like he needs that jacket"
-				}
-			]
-		}
 	]
 };
